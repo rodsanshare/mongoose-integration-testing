@@ -1,7 +1,8 @@
 const app = require('../app');
 const request = require('supertest');
 var mongoose = require('mongoose');
-var mongoDB = 'mongodb://localhost/my_test_database';
+require('dotenv/config');
+const mongoDB = process.env.DB;
 mongoose.connect(mongoDB);
 
 describe('App test', () => {

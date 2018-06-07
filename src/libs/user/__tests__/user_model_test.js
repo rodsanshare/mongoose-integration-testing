@@ -1,6 +1,7 @@
 var mongoose = require('mongoose');
 // we use a test database for testing
-var mongoDB = 'mongodb://localhost/my_test_database';
+require('dotenv/config');
+const mongoDB = process.env.DB;
 mongoose.connect(mongoDB);
 const User = require('../user_model');
 

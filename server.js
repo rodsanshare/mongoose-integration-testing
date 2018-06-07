@@ -1,5 +1,6 @@
 const mongoose = require("mongoose");
-const mongoDB = "mongodb://localhost/my_database";
+require('dotenv/config');
+const mongoDB = process.env.DB;
 const fetch = require("node-fetch");
 mongoose.connect(mongoDB);
 const app = require('./src/app');
