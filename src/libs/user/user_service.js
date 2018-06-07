@@ -7,7 +7,8 @@ const createUser = User => (name, birthday) => {
 };
 
 const listUsers = User => () => {
-    return User.find({});
+    return User;
+    //return User.find({});
 };
 
 module.exports = function (User)  {
