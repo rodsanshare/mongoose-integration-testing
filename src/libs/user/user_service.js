@@ -10,7 +10,7 @@ const listUsers = User => () => {
     return User.find({});
 };
 
-module.exports = User => {
+module.exports = function (User)  {
     return {
         createUser: createUser(User),
         listUsers: listUsers(User)
